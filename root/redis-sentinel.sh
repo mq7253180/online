@@ -3,10 +3,10 @@ for pid in $pids
 do
         kill -9 $pid
 done
-rm -f /quincy/env/redis/storage/*
-/quincy/env/redis/redis-bin/src/redis-server /quincy/env/redis/cfg/redis.conf
-/quincy/env/redis/redis-bin/src/redis-server /quincy/env/redis/cfg/redis-slave1.conf
-/quincy/env/redis/redis-bin/src/redis-server /quincy/env/redis/cfg/redis-slave2.conf
-/quincy/env/redis/redis-bin/src/redis-sentinel /quincy/env/redis/cfg/sentinel1.conf
-/quincy/env/redis/redis-bin/src/redis-sentinel /quincy/env/redis/cfg/sentinel2.conf
-/quincy/env/redis/redis-bin/src/redis-sentinel /quincy/env/redis/cfg/sentinel3.conf
+rm -f /quincy/redis/storage/*
+redis-server /quincy/redis/conf/redis.conf
+redis-server /quincy/redis/conf/redis-slave1.conf
+redis-server /quincy/redis/conf/redis-slave2.conf
+redis-sentinel /quincy/redis/conf/sentinel1.conf
+redis-sentinel /quincy/redis/conf/sentinel2.conf
+redis-sentinel /quincy/redis/conf/sentinel3.conf

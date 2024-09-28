@@ -3,7 +3,7 @@ mkdir -p /logs/nginx
 ln -s /quincy/env/git-bin/bin/git /usr/local/bin/git
 ln -s /quincy/maven/apache-maven/bin/mvn /usr/local/bin/mvn
 ln -s /quincy/nginx/sbin/nginx /usr/local/bin/nginx
-/quincy/env/redis/redis-bin/src/redis-server /quincy/env/redis/cfg/redis.conf
+redis-server /quincy/redis/conf/redis.conf
 groupadd mysql
 useradd -r -m -d /usr/mysql -g mysql -s /bin/false mysql
 mkdir -p /logs/mysql
