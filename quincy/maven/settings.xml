@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings> 
+	<localRepository>/quincy/maven/m2/repository</localRepository>
+	<mirrors>
+		<mirror>
+			<id>UK</id>
+			<name>UK Central</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+			<!--url>https://uk.maven.org/maven2</url-->
+			<!--url>https://repo1.maven.org/maven2</url-->
+			<mirrorOf>central</mirrorOf>
+		</mirror>
+	</mirrors>
+	<profiles>
+		<profile>
+			<id>all</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<gpg.executable>gpg</gpg.executable>
+				<gpg.keyname>CAC41CB0</gpg.keyname>
+				<gpg.passphrase>1qazxsw23edc</gpg.passphrase>
+			</properties>
+			<repositories>
+				<repository>
+					<id>origin</id>
+					<name>Offical Nexus Site</name>
+					<!--url>http://maven.oschina.net/content/groups/public/</url-->
+					<!--url>http://repository.apache.org/content/groups/public/</url-->
+					<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+					<!--url>http://192.168.1.18:8081/nexus/content/groups/dhgate-repo/</url-->
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+                                        <id>origin</id>
+                                        <name>Offical Nexus Site</name>
+                                        <!--url>http://maven.oschina.net/content/groups/public/</url-->
+					<!--url>http://repository.apache.org/content/groups/public/</url-->
+					<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+					<!--url>http://192.168.1.18:8081/nexus/content/groups/dhgate-repo/</url-->
+                                        <releases>
+                                                <enabled>true</enabled>
+                                        </releases>
+                                        <snapshots>
+                                                <enabled>false</enabled>
+                                        </snapshots>
+                                </pluginRepository>
+			</pluginRepositories>
+		</profile>
+	</profiles>
+	<activeProfiles>
+		<activeProfile>all</activeProfile>
+	</activeProfiles>
+	<servers>
+		<server>
+			<id>hce</id>
+			<username>deployment</username>
+			<password>deployment123</password>
+		</server>
+		<server>
+			<id>ossrh</id>
+			<username>maqiang</username>
+			<password>1qazXSW@3edc</password>
+		</server>
+	</servers>
+	<pluginGroups>
+		<!-- pluginGroup
+		| Specifies a further group identifier to use for plugin lookup.
+		<pluginGroup>org.mortbay.jetty</pluginGroup>
+		-->
+	</pluginGroups>
+	<!-- proxies
+	| This is a list of proxies which can be used on this machine to connect to the network.
+	| Unless otherwise specified (by system property or command-line switch), the first proxy
+	| specification in this list marked as active will be used.
+	|-->
+	<proxies>
+		<!-- proxy
+		| Specification for one proxy, to be used in connecting to the network.
+		<proxy>
+		<id>optional</id>
+		<active>true</active>
+		<protocol>http</protocol>
+		<username>proxyuser</username>
+		<password>proxypass</password>
+		<host>proxy.host.net</host>
+		<port>80</port>
+		<nonProxyHosts>local.net|some.host.com</nonProxyHosts>
+		</proxy>
+		-->
+	</proxies>
+</settings>
