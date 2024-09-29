@@ -23,4 +23,3 @@ nohup java -jar /quincy/github/springcloud/target/quincy-springcloud-0.0.1-SNAPS
 #/quincy/env/zookeeper/bin3/bin/zkServer.sh start
 #/quincy/env/haproxy/haproxy-bin/sbin/haproxy -f /quincy/env/haproxy/quincy.cfg
 #/quincy/env/keepalived/keepalived-bin/sbin/keepalived -f /quincy/env/keepalived/keepalived.conf
-chmod 777 /logs
