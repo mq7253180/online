@@ -1,6 +1,7 @@
 mkdir -p /logs/nginx
 mkdir /logs/redis
 mkdir /logs/mysql
+mkdir /logs/ducati
 ln -s /quincy/programs/git-bin/bin/git /usr/local/bin/git
 ln -s /quincy/maven/apache-maven/bin/mvn /usr/local/bin/mvn
 ln -s /quincy/nginx/sbin/nginx /usr/local/sbin/nginx
@@ -23,3 +24,4 @@ nohup java -jar /quincy/github/springcloud/target/quincy-springcloud-0.0.1-SNAPS
 #/quincy/env/zookeeper/bin3/bin/zkServer.sh start
 #/quincy/env/haproxy/haproxy-bin/sbin/haproxy -f /quincy/env/haproxy/quincy.cfg
 #/quincy/env/keepalived/keepalived-bin/sbin/keepalived -f /quincy/env/keepalived/keepalived.conf
+chmod 777 /logs
