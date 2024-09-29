@@ -1,7 +1,6 @@
 mkdir -p /logs/nginx
 mkdir /logs/redis
 mkdir /logs/mysql
-mkdir /logs/ducati
 ln -s /quincy/programs/git-bin/bin/git /usr/local/bin/git
 ln -s /quincy/maven/apache-maven/bin/mvn /usr/local/bin/mvn
 ln -s /quincy/nginx/sbin/nginx /usr/local/sbin/nginx
