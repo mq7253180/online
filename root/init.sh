@@ -1,16 +1,23 @@
 mkdir -p /logs/nginx
 mkdir /logs/redis
 mkdir /logs/mysql
+mkdir /logs/ducati
 ln -s /quincy/programs/git-bin/bin/git /usr/local/bin/git
 ln -s /quincy/maven/apache-maven/bin/mvn /usr/local/bin/mvn
 ln -s /quincy/nginx/sbin/nginx /usr/local/sbin/nginx
+groupadd admin
+useradd -r -m -d /usr/admin -g admin admin
+cp /quincy/github/online/root/* /root
+cp /quincy/github/online/usr/admin /usr/admin
+chown -R admin:admin /quincy/github/configuration
+chown -R admin:admin /quincy/github/springcloud
+chown -R admin:admin /quincy/github/ducati
+chown -R admin:admin /logs/ducati
 nginx
 redis-server /quincy/redis/conf/redis.conf
 groupadd mysql
 useradd -r -m -d /usr/mysql -g mysql -s /bin/false mysql
 chown -R mysql:mysql /logs/mysql
-#cd /quincy/mysql
-#rpm -ivh /quincy/mysql/libaio-0.3.109-13.el7.x86_64.rpm
 cd /quincy/mysql/libaio-src
 make install
 ln -sf /usr/lib/libaio.so.1.0.2 /usr/lib64/libaio.so
