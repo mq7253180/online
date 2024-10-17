@@ -1,0 +1,20 @@
+/root/*.sh
+/logs
+	/mysql
+	/nginx
+	/redis
+	/ducati
+	/springcloud
+/quincy
+	/github
+	/html
+	/installation
+	/jdk-21
+	/letsencrypt
+	/letsencrypt2
+	/maven
+	/mysql
+	/nginx
+	/nginx-conf
+	/programs
+	/redis
